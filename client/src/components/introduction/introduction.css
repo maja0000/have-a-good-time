@@ -1,0 +1,44 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.header {
+  background-image: url('../../pictures/question.svg');
+  height: 20px;
+  width: 30%;
+  padding: 50px;
+  background-position: center;
+  background-size: 400px;
+  background-repeat: no-repeat;
+  margin: 60px 0 20px 0;
+}
+.illustration {
+  background-image: url('../../pictures/chilling.svg');
+  height: 350px;
+  width: 370px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 400px;
+}
+.couple-of-ideas {
+  margin-bottom: 30px;
+  background-image: url('../../pictures/coupleofid.svg');
+  height: 100px;
+  width: 400px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 300px;
+}
+.bottom-graphic {
+  background-image: url('../../pictures/clean.svg');
+  height: 2200px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 10px;
+}

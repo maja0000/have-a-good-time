@@ -1,0 +1,99 @@
+* {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: rgb(77, 75, 75);
+}
+a:hover {
+  color: #e53855;
+}
+a:visited {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+body {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+h1 {
+  color: rgb(77, 75, 75);
+}
+
+/* // navbar */
+.nav-container {
+  position: fixed;
+  background-color: white;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #bcbcbc;
+}
+.list-item {
+  border-right: 1px solid #bcbcbc;
+  text-align: center;
+}
+.helpWrapper {
+  width: 13%;
+  border-right: 1px solid #bcbcbc;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.ideaWrapper {
+  width: 12%;
+  border-right: 1px solid #bcbcbc;
+  padding-top: 20px;
+  text-align: center;
+}
+.idea {
+  color: #e53855;
+}
+.idea:hover {
+  color: #ffc735;
+}
+.homeWrapper {
+  width: 8%;
+  padding-top: 20px;
+  border-right: 1px solid #bcbcbc;
+  text-align: center;
+}
+
+.empty {
+  width: 5%;
+}
+.empty-two {
+  width: 5%;
+}
+.portfolio {
+  width: 5%;
+  background-image: url('./pictures/majagach.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 50px;
+  margin: 0 10px 0 10px;
+}
+.portfolio:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+.title {
+  width: 37%;
+  background-image: url('./pictures/1.svg');
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 350px;
+  padding: 10px;
+}
+.empty-bigger {
+  width: 30%;
+  border-right: 1px solid #bcbcbc;
+  border-left: 1px solid #bcbcbc;
+}

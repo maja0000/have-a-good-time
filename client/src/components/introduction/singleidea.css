@@ -1,0 +1,31 @@
+.idea-container {
+  height: 320px;
+  width: 100%;
+  margin: 10px;
+  background-color: #8991dc;
+  opacity: 0.9;
+  margin-bottom: 100px;
+}
+.idea-wrapper {
+  width: 60%;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.idea-title {
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  height: 100%;
+  width: 100%;
+  padding: 20px 0 20px 0;
+}
+.idea-info {
+  float: left;
+  display: inline;
+  width: 49%;
+}
+.idea-description {
+  color: white;
+  /* padding: 0 0 0 20px; */
+}
