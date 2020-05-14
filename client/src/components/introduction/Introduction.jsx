@@ -50,11 +50,12 @@ function Introduction() {
         <div className="illustration"></div>
         <div className="couple-of-ideas"></div>
       </div>
-      <div className="bottom-graphic">
+      <div className="all-ideas">
         {ideas.map((idea, index) => (
           <SingleIdea key={index} ideas={idea} />
         ))}
       </div>
+      <div className="bottom-graphic"></div>
     </>
   );
 }

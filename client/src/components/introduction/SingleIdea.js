@@ -2,19 +2,9 @@ import React from 'react';
 import './singleidea.css';
 
 function SingleIdea({ ideas, img }) {
-  console.log(ideas.img);
   const style = {
     ideaPic: {
       backgroundImage: `url("${ideas.img}")`,
-      // backgroundSize: '200px',
-      height: '200px',
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'noRepeat',
-      float: 'left',
-      display: 'inline',
-      width: '49%',
-      marginTop: '20px',
     },
   };
   return (
@@ -25,7 +15,7 @@ function SingleIdea({ ideas, img }) {
             <div className="idea-title">{ideas.title}</div>
             <div className="idea-description">{ideas.description}</div>
           </div>
-          <div style={style.ideaPic}></div>
+          <div className="idea-pic" style={style.ideaPic}></div>
         </div>
       </div>
     </>

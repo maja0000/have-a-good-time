@@ -42,3 +42,7 @@
   background-size: 100%;
   border-radius: 10px;
 }
+.all-ideas {
+  position: absolute;
+  top: 850px;
+}

@@ -1,0 +1,130 @@
+.form-wrapper {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 100px;
+  align-items: center;
+  margin: auto;
+}
+.ideas-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+form {
+  max-width: 500px;
+  margin: 50px 60px 0 20px;
+}
+.one-idea-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-idea {
+  height: 100px;
+  width: 200px;
+  border-radius: 20px;
+  border: 1px solid salmon;
+  margin: 5px;
+  padding: 10px;
+  overflow-y: auto;
+}
+.user-name {
+  border-radius: 20px;
+  border: 1px solid salmon;
+  margin: 5px;
+  padding: 6px;
+  overflow-y: auto;
+}
+input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+label {
+  line-height: 2;
+  text-align: left;
+  display: block;
+  margin-bottom: 13px;
+  margin-top: 20px;
+  color: black;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+button[type='submit'],
+input[type='submit'] {
+  background: salmon;
+  color: black;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 10px;
+}
+
+button[type='submit']:hover,
+input[type='submit']:hover {
+  background: #ffc735;
+  color: black;
+}
+
+button[type='submit']:active,
+input[type='button']:active,
+input[type='submit']:active {
+  transition: 0.3s all;
+  transform: translateY(3px);
+  border: 1px solid transparent;
+  opacity: 0.8;
+}
+
+input:disabled {
+  opacity: 0.4;
+}
+
+input[type='button']:hover {
+  transition: 0.3s all;
+}
+
+button[type='submit'],
+input[type='button'],
+input[type='submit'] {
+  -webkit-appearance: none;
+}
+
+button[type='button'] {
+  display: block;
+  appearance: none;
+  background: white;
+  color: black;
+  border: none;
+  /* text-transform: uppercase; */
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+button {
+  display: block;
+  appearance: none;
+  margin-top: 40px;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+  .form-wrapper {
+    flex-direction: column;
+  }
+}
