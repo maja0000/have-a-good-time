@@ -22,16 +22,16 @@ form {
   align-items: center;
 }
 .user-idea {
-  height: 100px;
+  height: 80px;
   width: 200px;
-  border-radius: 20px;
-  border: 1px solid salmon;
+  border-radius: 5px;
+  border: 1px solid lightgray;
   margin: 5px;
   padding: 10px;
   overflow-y: auto;
 }
 .user-name {
-  border-radius: 20px;
+  border-radius: 5px;
   border: 1px solid salmon;
   margin: 5px;
   padding: 6px;
@@ -126,5 +126,11 @@ button {
 @media (max-width: 900px) {
   .form-wrapper {
     flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .user-idea {
+    height: 60px;
+    width: 150px;
   }
 }
