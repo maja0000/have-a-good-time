@@ -7,7 +7,7 @@
 .header {
   background-image: url('../../pictures/question.svg');
   height: 20px;
-  width: 30%;
+  width: 50%;
   padding: 50px;
   background-position: center;
   background-size: 400px;
@@ -45,4 +45,26 @@
 .all-ideas {
   position: absolute;
   top: 850px;
+}
+@media (max-width: 600px) {
+  .illustration {
+    height: 150px;
+    width: 370px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 250px;
+  }
+  .header {
+    background-size: 250px;
+  }
+  .couple-of-ideas {
+    background-size: 250px;
+  }
+}
+@media (max-width: 400px) {
+  .header {
+    background-size: 250px;
+    width: 280px;
+  }
 }

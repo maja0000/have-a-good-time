@@ -13,7 +13,7 @@ function AddIdeas() {
     fetch('https://have-a-good-time.herokuapp.com/')
       .then((res) => res.json())
       .then((res) => {
-        setIdeas(res);
+        setIdeas(res.reverse());
         setLoading(false);
       })
       .catch((error) => {
@@ -47,6 +47,7 @@ function AddIdeas() {
   const updateData = (event) => {
     setData({ ...data, [event.target.name]: event.target.value });
   };
+  // console.log('data', data);
 
   return (
     <>
@@ -55,6 +56,7 @@ function AddIdeas() {
       ) : (
         <div className="form-wrapper">
           <form onSubmit={handleSubmit}>
+            <div className="form-picture"></div>
             <p>
               share your ideas how to spend time at home durning quarantine. No
               pressure to be over productive or super creative, everything
@@ -68,7 +70,7 @@ function AddIdeas() {
           </form>
           <div className="ideas-container">
             {ideas.map((idea, key) => (
-              <div className="one-idea-name">
+              <div key={key} className="one-idea-name">
                 <div className="user-idea">{idea.idea}</div>
                 <span className="user-name">by {idea.author}</span>
               </div>

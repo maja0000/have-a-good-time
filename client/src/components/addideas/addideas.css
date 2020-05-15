@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: row;
   padding-top: 100px;
-  align-items: center;
   margin: auto;
 }
 .ideas-container {
@@ -12,8 +11,15 @@
   flex-wrap: wrap;
   padding: 10px;
 }
+.form-picture {
+  background-image: url('../../pictures/running.svg');
+  height: 20px;
+  width: 40%;
+  padding: 50px;
+  background-size: 140px;
+  background-repeat: no-repeat;
+}
 form {
-  max-width: 500px;
   margin: 50px 60px 0 20px;
 }
 .one-idea-name {
@@ -127,10 +133,36 @@ button {
   .form-wrapper {
     flex-direction: column;
   }
+  .ideas-container {
+    justify-content: center;
+  }
+
+  .form {
+    margin: 50px 0 0 20px;
+  }
+  .form-picture {
+    height: 20px;
+    width: 100%;
+    padding: 50px;
+    background-position: center;
+    background-size: 140px;
+  }
 }
 @media (max-width: 600px) {
   .user-idea {
     height: 60px;
     width: 150px;
+  }
+  .form-picture {
+    height: 20px;
+    width: 30%;
+    background-position: center;
+    background-size: 120px;
+  }
+  .form-wrapper {
+    padding-top: 40px;
+  }
+  .form {
+    margin: 50px 0 0 20px;
   }
 }

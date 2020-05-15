@@ -51,9 +51,9 @@ function Introduction() {
         <div className="couple-of-ideas"></div>
       </div>
       <div className="all-ideas">
-        {ideas.map((idea, index) => (
+        {/* {ideas.map((idea, index) => (
           <SingleIdea key={index} ideas={idea} />
-        ))}
+        ))} */}
       </div>
       <div className="bottom-graphic"></div>
     </>
