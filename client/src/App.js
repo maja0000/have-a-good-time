@@ -21,7 +21,8 @@ function App() {
       <Router>
         <div className="nav-container">
           <div className="list-item empty "></div>
-          <span className="title"></span>
+          <div className="title" />
+
           <div className="empty-bigger" />
 
           <div className="homeWrapper">

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './introduction.css';
 // component
-import SingleIdea from './SingleIdea';
-
+import DefaultIdeas from './DefaultIdeas';
 const ideasList = [
   {
     id: 'idea2',
@@ -46,16 +45,12 @@ function Introduction() {
   return (
     <>
       <div className="wrapper">
-        <div className="header"></div>
-        <div className="illustration"></div>
-        <div className="couple-of-ideas"></div>
+        <div className="header">No idea what to do durning the lockdown?</div>
+        <div className="couple-of-ideas">we have some ideas</div>
+        {/* <div className="illustration"></div> */}
+        <DefaultIdeas />
       </div>
-      <div className="all-ideas">
-        {/* {ideas.map((idea, index) => (
-          <SingleIdea key={index} ideas={idea} />
-        ))} */}
-      </div>
-      <div className="bottom-graphic"></div>
+      <div className="all-ideas"></div>
     </>
   );
 }
