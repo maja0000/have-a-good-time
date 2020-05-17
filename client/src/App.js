@@ -39,7 +39,7 @@ function App() {
 
           <div className="ideaWrapper">
             <NavLink className="idea" to="/add-ideas">
-              share your ideas!
+              share your <br /> ideas!
             </NavLink>
           </div>
           <a

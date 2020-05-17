@@ -1,0 +1,6 @@
+.found {
+  background-image: url('../../pictures/page-not-found-4.png');
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-size: 'cover';
+}

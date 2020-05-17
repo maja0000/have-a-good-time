@@ -6,10 +6,9 @@ import { css } from '@emotion/core';
 import HashLoader from 'react-spinners/HashLoader';
 const override = css`
   display: block;
-  margin: 0 auto;
-  position: 'fixed';
-  top: '50%';
-  left: '50%';
+  margin-left: 50%;
+  margin-right: 50%;
+
   border-color: #ffc735;
 `;
 function AddIdeas() {
@@ -23,7 +22,7 @@ function AddIdeas() {
 
   // GET
   useEffect(() => {
-    fetch('https://have-a-good-time.herokuapp.com/')
+    fetch('https://have-a-good-time-back.herokuapp.com/')
       .then((res) => res.json())
       .then((res) => {
         setIdeas(res.reverse());
@@ -41,7 +40,7 @@ function AddIdeas() {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch('https://have-a-good-time.herokuapp.com/', {
+    fetch('https://have-a-good-time-back.herokuapp.com/', {
       method: 'POST',
       headers: new Headers({
         'Content-Type': 'application/json',
