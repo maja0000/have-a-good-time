@@ -11,6 +11,7 @@ import Main from './components/introduction/Introduction';
 import Help from './components/help/Help';
 import AddIdeas from './components/addideas/AddIdeas';
 import NotFound from './components/notfound/NotFound';
+import { ToastContainer } from 'react-toastify';
 
 // styling
 import './App.css';
@@ -18,6 +19,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <ToastContainer />
+
       <Router>
         <div className="nav-container">
           <div className="list-item empty "></div>

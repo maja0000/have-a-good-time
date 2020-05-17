@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-// import "react-toastify/dist/ReactToastify.css";
-// import { toast } from "react-toastify";
+
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './addideas.css';
 import { css } from '@emotion/core';
 import HashLoader from 'react-spinners/HashLoader';
@@ -12,7 +13,6 @@ const override = css`
   border-color: #ffc735;
 `;
 function AddIdeas() {
-  const [sent, setSent] = useState(false);
   const [ideas, setIdeas] = useState([]);
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState({
@@ -25,7 +25,7 @@ function AddIdeas() {
     fetch('https://have-a-good-time-back.herokuapp.com/')
       .then((res) => res.json())
       .then((res) => {
-        setIdeas(res.reverse());
+        setIdeas(res);
         setLoading(false);
       })
       .catch((error) => {
@@ -34,12 +34,18 @@ function AddIdeas() {
   }, []);
 
   // POST
-  // const [flash, setFlash] = useState(true);
   const updateData = (event) => {
     setData({ ...data, [event.target.name]: event.target.value });
   };
+
   const handleSubmit = (event) => {
-    event.preventDefault();
+    if (!data.author) {
+      toast.error('yikes! you forgot your name... 🙈❕');
+    }
+    if (!data.idea) {
+      toast.error('yikes! you forgot your idea... 🙈❕');
+    }
+    // event.preventDefault();
     fetch('https://have-a-good-time-back.herokuapp.com/', {
       method: 'POST',
       headers: new Headers({
@@ -47,33 +53,31 @@ function AddIdeas() {
       }),
       body: JSON.stringify(data),
     })
-      .then((res) => res.json())
-      .then(
-        (res) => setSent(res.sent),
-        (err) => setSent(err.sent)
-      );
-    // sent ? toast.success("yaaas") : toast.error("nope");
+      .then((res) => {
+        toast.success('🎉 nice one! thanksss! 🎉');
+      })
+      .catch((err) => {
+        toast.error('yikes! something went wrong! 🔎');
+      });
   };
   // PUT
 
   const updateIdea = (id) => {
-    fetch(`https://have-a-good-time.herokuapp.com/${id}`, {
+    fetch(`https://have-a-good-time-back.herokuapp.com/${id}`, {
       method: 'PUT',
       headers: new Headers({
         'Content-Type': 'application/json',
       }),
-      body: JSON.stringify({ likes: 1 }),
+      body: JSON.stringify({ $inc: { likes: 1 } }),
     })
       .then((res) => res.json())
-      .then(
-        (res) => setSent(res.sent),
-        (err) => setSent(err.sent)
-      );
-    console.log('res');
-    // sent ? toast.success("yaaas") : toast.error("nope");
+      .then((res) => {
+        toast.success('cool, thanks for your vote!');
+      })
+      .catch((err) => {
+        toast.error('yikes! something went wrong!');
+      });
   };
-
-  // console.log('data', data);
 
   return (
     <>

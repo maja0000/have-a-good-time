@@ -48,22 +48,22 @@ form {
 .name-vote {
   margin: 5px 0 20px 0;
   display: flex;
-  /* flex-direction: row; */
 }
 .vote {
   background-image: url('../../pictures/like.svg');
-  width: 10px;
-  /* background-position: center; */
-  background-size: cover;
+  width: 20px;
   background-repeat: no-repeat;
-
   padding: 10px;
   background-repeat: no-repeat;
+  transition: all 0.2s ease-in-out;
+  background-position: center;
 }
 .vote:hover {
   border: 1px solid #ffc735;
-
   color: white;
+}
+.vote:active {
+  transform: scale(2);
 }
 
 input {
