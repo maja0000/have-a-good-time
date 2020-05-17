@@ -15,12 +15,12 @@
   background-image: url('../../pictures/running.svg');
   height: 20px;
   width: 40%;
-  padding: 50px;
+  padding: 50px 50px 30px 50px;
   background-size: 140px;
   background-repeat: no-repeat;
 }
 form {
-  margin: 50px 60px 0 20px;
+  margin: 30px 60px 0 20px;
 }
 .one-idea-name {
   display: flex;
@@ -30,15 +30,15 @@ form {
 .user-idea {
   height: 80px;
   width: 200px;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid lightgray;
   margin: 5px;
   padding: 10px;
   overflow-y: auto;
 }
 .user-name {
-  border-radius: 5px;
-  border: 1px solid salmon;
+  border-radius: 15px;
+  border: 2px solid salmon;
   margin: 5px;
   padding: 6px;
   overflow-y: auto;
@@ -81,7 +81,7 @@ label {
   line-height: 2;
   text-align: left;
   display: block;
-  margin-bottom: 13px;
+  margin-bottom: 5px;
   margin-top: 20px;
   color: black;
   font-size: 14px;
@@ -94,7 +94,7 @@ input[type='submit'] {
   color: black;
   text-transform: uppercase;
   border: none;
-  margin-top: 40px;
+  margin-top: 20px;
   padding: 20px;
   font-size: 16px;
   font-weight: 100;

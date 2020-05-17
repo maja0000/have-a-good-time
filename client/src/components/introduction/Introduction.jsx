@@ -45,9 +45,11 @@ function Introduction() {
   return (
     <>
       <div className="wrapper">
-        <div className="header">No idea what to do durning the lockdown?</div>
+        <div className="header">
+          no idea what to do <br />
+          durning the lockdown?
+        </div>
         <div className="couple-of-ideas">we have some ideas</div>
-        {/* <div className="illustration"></div> */}
         <DefaultIdeas />
       </div>
       <div className="all-ideas"></div>

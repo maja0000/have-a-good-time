@@ -3,14 +3,13 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* background-color: lightgrey; */
 }
 .idea-header {
+  margin: 20px;
   writing-mode: vertical-rl;
   text-orientation: upright;
   color: white;
   border: 4px solid #f7b42c;
-
   font-weight: 800;
   font-size: 40px;
   font-family: 'Roboto', sans-serif;
@@ -24,15 +23,20 @@
   border-radius: 30px;
   border: none;
   background-color: #f7b42c;
+  border: 4px solid #f7b42c;
   background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
 }
 .art {
   background-image: url('../../pictures/art.jpg');
   background-size: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .science {
   background-image: url('../../pictures/science.jpg');
   background-size: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .games {
   background-image: url('../../pictures/games.jpg');
@@ -55,13 +59,26 @@
   background-repeat: no-repeat;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1090px) {
+  .idea-header {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 850px) {
   .ideas-headers-container {
     display: flex;
     flex-direction: column;
+    width: 80%;
   }
   .idea-header {
     writing-mode: horizontal-tb;
     font-size: 30px;
+    width: 100%;
+  }
+}
+@media (max-width: 350px) {
+  .idea-header {
+    width: 80%;
   }
 }

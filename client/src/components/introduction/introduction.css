@@ -5,66 +5,38 @@
   align-items: center;
 }
 .header {
-  /* background-image: url('../../pictures/question.svg'); */
-  height: 20px;
-  width: 50%;
-  padding: 50px;
-  /* background-position: center; */
-  /* background-size: 400px; */
-  /* background-repeat: no-repeat; */
-  margin: 60px 0 20px 0;
+  height: auto;
+  width: 80%;
+  font-weight: 500;
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+  margin: 90px 0 20px 80px;
 }
-.illustration {
-  background-image: url('../../pictures/chilling.svg');
-  height: 350px;
-  width: 370px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size: 300px;
-}
+
 .couple-of-ideas {
-  /* margin-bottom: 30px; */
-  /* background-image: url('../../pictures/coupleofid.svg'); */
-  height: 100px;
-  width: 400px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size: 300px;
+  font-weight: 500;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  height: auto;
+  margin-bottom: 20px;
+  margin-left: 30px;
 }
-.bottom-graphic {
-  /* background-image: url('../../pictures/white.svg'); */
-  height: 100vh;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  border-radius: 10px;
-}
-.all-ideas {
-  position: absolute;
-  top: 850px;
-}
-@media (max-width: 600px) {
-  .illustration {
-    height: 150px;
-    width: 370px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: 200px;
-  }
-  .header {
-    background-size: 250px;
-  }
+@media (max-width: 850px) {
   .couple-of-ideas {
-    background-size: 250px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .header {
+    font-size: 30px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 350px) {
+  .couple-of-ideas {
+    font-weight: 500;
+    font-size: 15px;
+  }
   .header {
-    background-size: 250px;
-    width: 280px;
+    font-size: 20px;
+    margin: 90px 0 20px 20px;
   }
 }
