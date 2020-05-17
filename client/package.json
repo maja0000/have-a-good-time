@@ -29,6 +29,7 @@
   },
   "scripts": {
     "prod": "NODE_ENV=production node server.js",
+    "postinstall": "webpack -p",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
