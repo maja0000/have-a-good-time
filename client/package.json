@@ -28,6 +28,7 @@
     "react-toastify": "^6.0.4"
   },
   "scripts": {
+    "prod": "NODE_ENV=production node server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
