@@ -9,11 +9,11 @@ const override = css`
   display: block;
   margin-left: 50%;
   margin-right: 50%;
-
   border-color: #ffc735;
 `;
 function AddIdeas() {
   const [ideas, setIdeas] = useState([]);
+  const [likes, setLikes] = useState(0);
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState({
     idea: '',
@@ -72,13 +72,15 @@ function AddIdeas() {
     })
       .then((res) => res.json())
       .then((res) => {
+        setLikes(likes + 1);
+        console.log('in fetch', likes);
         toast.success('cool, thanks for your vote!');
       })
       .catch((err) => {
         toast.error('yikes! something went wrong!');
       });
   };
-
+  console.log('outside', likes);
   return (
     <>
       {loading ? (

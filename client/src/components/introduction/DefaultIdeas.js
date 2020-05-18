@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './defaultideas.css';
 import Modal from 'react-modal';
+import { ModalProvider, ModalConsumer } from '../Modals/ModalContext';
+import ModalRoot from '../Modals/ModalRoot';
+
 import ModalScience from '../Modals/ModalScience';
 import ModalMusic from '../Modals/ModalMusic';
 import ModalSocial from '../Modals/ModalSocial';
@@ -19,127 +22,96 @@ const customStyles = {
     borderRadius: '30px',
   },
 };
+const ModalSocialOpen = ({ onRequestClose, ...otherProps }) => (
+  <Modal isOpen onRequestClose={onRequestClose} {...otherProps}>
+    <ModalSocial />
+    <button onClick={onRequestClose}>close</button>
+  </Modal>
+);
+
+const ModalArtOpen = ({ onRequestClose, foo, ...otherProps }) => (
+  <Modal isOpen onRequestClose={onRequestClose} {...otherProps}>
+    <ModalArt />
+    <button onClick={onRequestClose}>close</button>
+  </Modal>
+);
+const ModalMusicOpen = ({ onRequestClose, foo, ...otherProps }) => (
+  <Modal isOpen onRequestClose={onRequestClose} {...otherProps}>
+    <ModalMusic />
+    <button onClick={onRequestClose}>close</button>
+  </Modal>
+);
+const ModalScienceOpen = ({ onRequestClose, foo, ...otherProps }) => (
+  <Modal isOpen onRequestClose={onRequestClose} {...otherProps}>
+    <ModalScience />
+    <button onClick={onRequestClose}>close</button>
+  </Modal>
+);
+const ModalGamesOpen = ({ onRequestClose, foo, ...otherProps }) => (
+  <Modal isOpen onRequestClose={onRequestClose} {...otherProps}>
+    <ModalGames />
+    <button onClick={onRequestClose}>close</button>
+  </Modal>
+);
+const ModalCookingOpen = ({ onRequestClose, foo, ...otherProps }) => (
+  <Modal isOpen onRequestClose={onRequestClose} {...otherProps}>
+    <ModalCooking />
+    <button onClick={onRequestClose}>close</button>
+  </Modal>
+);
 
 export default function DefaultIdeas() {
-  const [openScienceModal, setScienceModalOpen] = React.useState(false);
-  const [modalMusicIsOpen, setMusicModalOpen] = React.useState(false);
-  const [modalSocialIsOpen, setSocialModalOpen] = React.useState(false);
-  const [modalArtIsOpen, setArtModalOpen] = React.useState(false);
-  const [modalGamesIsOpen, setGamesModalOpen] = React.useState(false);
-  const [modalCookingIsOpen, setCookingModalOpen] = React.useState(false);
-
-  function openModal() {
-    setScienceModalOpen(true);
-  }
-  function closeScienceModal() {
-    setScienceModalOpen(false);
-  }
-
-  function openArtModal() {
-    setArtModalOpen(true);
-  }
-  function closeArtModal() {
-    setArtModalOpen(false);
-  }
-
-  function openMusicModal() {
-    setMusicModalOpen(true);
-  }
-  function closeMusicModal() {
-    setMusicModalOpen(false);
-  }
-  function openSocialModal() {
-    setSocialModalOpen(true);
-  }
-  function closeSocialModal() {
-    setSocialModalOpen(false);
-  }
-  function openGamesModal() {
-    setGamesModalOpen(true);
-  }
-  function closeGamesModal() {
-    setGamesModalOpen(false);
-  }
-  function openCookingModal() {
-    setCookingModalOpen(true);
-  }
-  function closeCookingModal() {
-    setCookingModalOpen(false);
-  }
-
   return (
     <React.Fragment>
-      <Modal
-        isOpen={openScienceModal}
-        onRequestClose={closeScienceModal}
-        style={customStyles}
-      >
-        <ModalScience />
-        <button onClick={closeScienceModal}>close</button>
-      </Modal>
-      <Modal
-        isOpen={modalMusicIsOpen}
-        onRequestClose={closeMusicModal}
-        style={customStyles}
-      >
-        <ModalMusic />
-        <button onClick={closeMusicModal}>close</button>
-      </Modal>
-      <Modal
-        isOpen={modalSocialIsOpen}
-        onRequestClose={closeSocialModal}
-        style={customStyles}
-      >
-        <ModalSocial />
-        <button onClick={closeSocialModal}>close</button>
-      </Modal>
-      <Modal
-        isOpen={modalArtIsOpen}
-        onRequestClose={closeArtModal}
-        style={customStyles}
-      >
-        <ModalArt />
-        <button onClick={closeArtModal}>close</button>
-      </Modal>
-      <Modal
-        isOpen={modalGamesIsOpen}
-        onRequestClose={closeGamesModal}
-        style={customStyles}
-      >
-        <ModalGames />
-        <button onClick={closeGamesModal}>close</button>
-      </Modal>
-      <Modal
-        isOpen={modalCookingIsOpen}
-        onRequestClose={closeCookingModal}
-        style={customStyles}
-      >
-        <ModalCooking />
-        <button onClick={closeCookingModal}>close</button>
-      </Modal>
-      <div className="ideas-headers-container">
-        <p className="idea-header social" onClick={openSocialModal}>
-          social{' '}
-        </p>
-        <p className="idea-header art" onClick={openArtModal}>
-          {' '}
-          art
-        </p>
-        <p className="idea-header music" onClick={openMusicModal}>
-          {' '}
-          music
-        </p>
-        <p className="idea-header science" onClick={openModal}>
-          {' '}
-          science
-        </p>
-        <p className="idea-header games" onClick={openGamesModal}>
-          games
-        </p>
-        <p className="idea-header cooking" onClick={openCookingModal}>
-          cooking
-        </p>
-      </div>
+      <ModalProvider>
+        <ModalRoot />
+        <ModalConsumer>
+          {({ showModal }) => (
+            <Fragment>
+              <div className="ideas-headers-container">
+                <p
+                  className="idea-header social"
+                  onClick={() => showModal(ModalSocialOpen)}
+                >
+                  social{' '}
+                </p>
+                <p
+                  className="idea-header art"
+                  onClick={() => showModal(ModalArtOpen, { foo: 'bar' })}
+                >
+                  art
+                </p>
+                <p
+                  className="idea-header music"
+                  onClick={() => showModal(ModalMusicOpen)}
+                >
+                  music
+                </p>
+                <p
+                  className="idea-header science"
+                  onClick={() => showModal(ModalScienceOpen)}
+                >
+                  {' '}
+                  science
+                </p>
+                <p
+                  className="idea-header games"
+                  onClick={() => showModal(ModalGamesOpen)}
+                >
+                  games
+                </p>
+
+                <p
+                  className="idea-header cooking"
+                  onClick={() => showModal(ModalCookingOpen)}
+                >
+                  cooking
+                </p>
+              </div>
+            </Fragment>
+          )}
+        </ModalConsumer>
+      </ModalProvider>
     </React.Fragment>
   );
 }
