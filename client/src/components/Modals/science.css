@@ -5,11 +5,12 @@
   width: 600px;
   border: 4px solid #f7b42c;
   border-radius: 30px;
+  margin: 0 auto;
 }
 .science-idea {
   display: flex;
   flex-direction: row;
-  margin: 5px;
+
   border-bottom: 1px solid #f7b42c;
   border-top: 1px solid #f7b42c;
 }

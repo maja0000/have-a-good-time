@@ -11,11 +11,26 @@ const scienceIdeas = [
     picture: require('../../pictures/nasa.png'),
   },
   {
-    id: '1',
+    id: '2',
     text: `Simple science experiments you can do at home`,
     link:
       'https://www.businessinsider.com/8-awesomely-simple-science-experiments-you-can-do-at-home-2016-7?r=DE&IR=T',
-    picture: require('../../pictures/experiment.png'),
+    picture:
+      'https://images.unsplash.com/photo-1532187643603-ba119ca4109e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
+  },
+  {
+    id: '3',
+    text: `Experiment with AI `,
+    link: 'https://experiments.withgoogle.com/',
+    picture:
+      'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
+  },
+  {
+    id: '4',
+    text: `Look at the stars up close`,
+    link: 'https://stellarium-web.org/',
+    picture:
+      'https://images.unsplash.com/photo-1589811765083-27b148dbf397?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=582&q=80',
   },
 ];
 function ModalScience() {
