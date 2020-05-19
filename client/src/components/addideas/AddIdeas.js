@@ -39,13 +39,16 @@ function AddIdeas() {
   };
 
   const handleSubmit = (event) => {
+    event.preventDefault();
     if (!data.author) {
       toast.error('yikes! you forgot your name... 🙈❕');
     }
     if (!data.idea) {
       toast.error('yikes! you forgot your idea... 🙈❕');
     }
-    // event.preventDefault();
+    if (data.idea && data.author) {
+      setIdeas([{ ...data, fake: true }, ...ideas]);
+    }
     fetch('https://have-a-good-time-back.herokuapp.com/', {
       method: 'POST',
       headers: new Headers({
@@ -53,14 +56,16 @@ function AddIdeas() {
       }),
       body: JSON.stringify(data),
     })
+      .then((res) => res.json())
       .then((res) => {
+        setIdeas(res.reverse());
         toast.success('🎉 nice one! thanksss! 🎉');
       })
       .catch((err) => {
         toast.error('yikes! something went wrong! 🔎');
       });
   };
-  // PUTjbb
+  // PUT
 
   const updateIdea = (id) => {
     fetch(`https://have-a-good-time-back.herokuapp.com/${id}`, {
@@ -80,7 +85,6 @@ function AddIdeas() {
         toast.error('yikes! something went wrong!');
       });
   };
-  console.log('outside', likes);
   return (
     <>
       {loading ? (
@@ -107,7 +111,11 @@ function AddIdeas() {
           </form>
           <div className="ideas-container">
             {ideas.map((idea, key) => (
-              <div key={key} className="one-idea-name">
+              <div
+                key={key}
+                className="one-idea-name"
+                style={idea.fake && { opacity: 0.3 }}
+              >
                 <div className="user-idea">{idea.idea}</div>
                 <div className="name-vote">
                   <p className="user-name ">by {idea.author}</p>
