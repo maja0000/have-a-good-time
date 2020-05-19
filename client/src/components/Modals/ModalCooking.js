@@ -4,7 +4,7 @@ import './science.css';
 const scienceIdeas = [
   {
     id: '1',
-    text: `Read about food! Clever written artickes about food culture `,
+    text: `Read about food! Clever articles about food culture `,
     link: 'https://www.famousformydinnerparties.com/all',
     picture:
       'https://res.cloudinary.com/dmiwizanu/image/upload/v1589830887/Screenshot_2020-05-18_at_21.41.23_vrlw0d.png',
