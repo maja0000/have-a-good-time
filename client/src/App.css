@@ -47,7 +47,7 @@ h1 {
 .ideaWrapper {
   width: 12%;
   border-right: 1px solid #bcbcbc;
-  padding-top: 20px;
+  padding-top: 10px;
   text-align: center;
 }
 .idea {
@@ -135,6 +135,7 @@ h1 {
     width: 16%;
   }
   .ideaWrapper {
+    padding-top: 10px;
     width: 16%;
   }
 }
