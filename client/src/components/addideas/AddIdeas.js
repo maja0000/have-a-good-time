@@ -60,7 +60,7 @@ function AddIdeas() {
         toast.error('yikes! something went wrong! 🔎');
       });
   };
-  // PUT
+  // PUTjbb
 
   const updateIdea = (id) => {
     fetch(`https://have-a-good-time-back.herokuapp.com/${id}`, {
