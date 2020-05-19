@@ -45,7 +45,7 @@ export default function ModalArt() {
                 backgroundImage: `url("${each.picture}")`,
                 backgroundSize: 'cover',
                 height: '100px',
-                width: '20%',
+                width: '40%',
               }}
             />
 
