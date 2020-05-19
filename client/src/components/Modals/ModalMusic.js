@@ -40,11 +40,11 @@ export default function ModalMusic() {
         {scienceIdeas.map((each) => (
           <a className="science-idea" href={`${each.link}`}>
             <div
+              className="modal-picture"
               style={{
                 backgroundImage: `url("${each.picture}")`,
                 backgroundSize: 'cover',
                 height: '100px',
-                width: '40%',
               }}
             />
 

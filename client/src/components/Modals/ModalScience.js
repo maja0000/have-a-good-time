@@ -4,9 +4,7 @@ import './science.css';
 const scienceIdeas = [
   {
     id: '1',
-    text: `NASA launches, landings, and events. Watch live broadcasts from NASA
-  Television and NASA's social media channels, and a schedule of
-  upcoming live events.`,
+    text: `NASA live launches, landings, and events. `,
     link: 'https://www.nasa.gov/nasalive',
     picture: require('../../pictures/nasa.png'),
   },
@@ -40,11 +38,11 @@ function ModalScience() {
         {scienceIdeas.map((each) => (
           <a target="_blank" className="science-idea" href={`${each.link}`}>
             <div
+              className="modal-picture"
               style={{
                 backgroundImage: `url("${each.picture}")`,
                 backgroundSize: 'cover',
                 height: '100px',
-                width: '40%',
               }}
             />
 
