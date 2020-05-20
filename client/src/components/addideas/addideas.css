@@ -54,7 +54,6 @@ form {
   width: 20px;
   background-repeat: no-repeat;
   padding: 10px;
-  background-repeat: no-repeat;
   transition: all 0.2s ease-in-out;
   background-position: center;
 }

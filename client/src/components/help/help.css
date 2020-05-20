@@ -1,9 +1,109 @@
-.wrapper-help {
-  height: 300px;
-  width: 300px;
+.wrap-help {
+  /* background-color: pink; */
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
   align-items: center;
   margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+.time {
+  /* background-color: darkseagreen; */
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 20px;
+}
+.money {
+  /* background-color: greenyellow; */
+  width: 50%;
+  margin: 20px;
+}
+.tip-pic-wrapper {
+  display: flex;
+}
+.tip {
+  background-color: salmon;
+  text-align: center;
+  width: 40%;
+  border-radius: 20px;
+  height: 80px;
+  margin: 10px;
+  color: white;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 25px;
+}
+.one {
+  background-image: url('../../pictures/shopping.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 150px;
+}
+.one-two {
+  background-image: url('../../pictures/educate.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 150px;
+}
+.one-three {
+  background-image: url('../../pictures/athome.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 130px;
+  background-color: #ffdbf0;
+}
+.two {
+  background-image: url('../../pictures/globe.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 130px;
+}
+.two-two {
+  background-image: url('../../pictures/mask.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 130px;
+}
+.picture-help {
+  width: 60%;
+  border-radius: 20px;
+  margin: 10px;
+  border: 4px solid #ffc735;
+  height: 100px;
+}
+.more-content {
+  border-radius: 20px;
+  /* background-color: green; */
+  margin: 10px;
+}
+.help-link {
+  color: #9fb2f8;
+}
+@media (max-width: 800px) {
+  .wrap-help {
+    flex-direction: column;
+  }
+  .time {
+    width: 80%;
+  }
+  .money {
+    width: 80%;
+  }
+  .wrap-help {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1000px) {
+  .wrap-help {
+    width: 90%;
+  }
+}
+@media (min-width: 800px) {
+  .picture-help {
+    height: 100px;
+  }
 }
