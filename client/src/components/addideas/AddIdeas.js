@@ -16,12 +16,6 @@ import './addideas.css';
 
 import useIdeas from './useIdeas';
 
-// const override = css`
-//   display: block;
-//   margin-left: 50%;
-//   margin-right: 50%;
-//   border-color: #ffc735;
-// `;
 const useStyles = makeStyles((theme) => ({
   formControl: {
     width: '100%',
@@ -122,11 +116,8 @@ function AddIdeas() {
           ))}
         </div>
         <div className="ideas-container">
-          <h3>CHOOSE A CATEGORY :</h3>
+          <h3>CHOOSE A CATAGORY :</h3>
           <div className="categories-container">
-            {/* <Link exact to={`${url}/all`}>
-              see all
-            </Link> */}
             {categories.map((category, key) => (
               <Link key={key} to={`${url}/${category}`}>
                 {category}
@@ -139,7 +130,6 @@ function AddIdeas() {
               component={DisplayAllIdeas}
             ></Route>
             <Route path={`${path}`} component={DisplayAll}></Route>
-            {/* <Route exact path={`add-ideas/all`} component={DisplayAll}></Route> */}
           </Switch>
         </div>
       </div>

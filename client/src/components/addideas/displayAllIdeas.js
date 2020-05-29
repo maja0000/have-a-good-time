@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import useIdeas from './useIdeas';
 import './addideas.css';
-import { Link, useRouteMatch, useParams, Route } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import { css } from '@emotion/core';
 import HashLoader from 'react-spinners/HashLoader';
@@ -13,9 +13,7 @@ const override = css`
 `;
 
 function DisplayAllIdeas() {
-  const [ideas, loading, addLike, addInput, getAllIdeas, addNewIdea] = useIdeas(
-    []
-  );
+  const [ideas, loading, addLike, , getAllIdeas] = useIdeas([]);
   useEffect(() => {
     getAllIdeas();
   }, []);
@@ -53,12 +51,7 @@ function DisplayAllIdeas() {
                   onClick={() => updateIdea(idea._id)}
                 ></p>
                 {idea.likes ? (
-                  <p
-                    className="user-name score"
-                    // style={likes.true && { backgroundColor: 'red' }}
-                  >
-                    {idea.likes}
-                  </p>
+                  <p className="user-name score">{idea.likes}</p>
                 ) : (
                   ''
                 )}

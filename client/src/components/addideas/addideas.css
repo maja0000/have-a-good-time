@@ -8,7 +8,6 @@
   flex-direction: row;
   padding-top: 100px;
   margin: auto;
-  /* background-color: indianred; */
 }
 .ideas-container {
   display: flex;
@@ -16,10 +15,8 @@
   width: 40%;
   flex-direction: column;
   padding: 10px;
-  /* background-color: yellow; */
 }
 .all-categories-container {
-  /* background-color: pink; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -65,7 +62,6 @@ form {
 }
 .categories-container {
   width: 100%;
-  /* margin: 10px 10px 30px 10px; */
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
