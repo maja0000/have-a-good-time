@@ -9,6 +9,7 @@ export default function useIdeas() {
   const [data, setData] = useState({
     idea: '',
     author: '',
+    category: '',
   });
 
   const getAllIdeas = () => {
@@ -25,6 +26,7 @@ export default function useIdeas() {
 
   const addInput = (event) => {
     setData({ ...data, [event.target.name]: event.target.value });
+    console.log(data);
   };
 
   const addNewIdea = (event) => {

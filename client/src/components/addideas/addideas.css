@@ -1,14 +1,19 @@
+*:focus {
+  outline: none;
+}
 .form-wrapper {
   height: 80%;
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   padding-top: 100px;
   margin: auto;
+  /* background-color: indianred; */
 }
 .ideas-container {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   padding: 10px;
 }
 .form-picture {
@@ -42,8 +47,30 @@ form {
   margin: 5px;
   padding: 6px;
   overflow-y: auto;
-
-  /* max-width: px; */
+}
+.categories-container {
+  width: 100%;
+  /* margin: 10px 10px 30px 10px; */
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+}
+.categories-container * {
+  border: 2px solid #ffc735;
+  border-radius: 40px;
+  padding: 5px;
+  height: 30px;
+  margin: 0 5px 5px 5px;
+  background-color: white;
+}
+.categories-container :hover {
+  border: 2px solid salmon;
+}
+.categories-container :active {
+  transition: all 0.2s ease-in-out;
+  transform: scale(2);
 }
 .name-vote {
   margin: 5px 0 20px 0;
@@ -150,7 +177,11 @@ button {
   padding: 10px 20px;
   border-radius: 4px;
 }
-
+@media (min-width: 900px) {
+  form {
+    width: 40%;
+  }
+}
 @media (max-width: 900px) {
   .form-wrapper {
     flex-direction: column;
@@ -161,6 +192,7 @@ button {
 
   .form {
     margin: 50px 0 0 20px;
+    width: 100%;
   }
   .form-picture {
     height: 20px;
@@ -186,5 +218,6 @@ button {
   }
   .form {
     margin: 50px 0 0 20px;
+    width: 100%;
   }
 }

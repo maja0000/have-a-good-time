@@ -57,9 +57,13 @@ function App() {
         <Switch>
           <Route exact path="/help" component={Help}></Route>
           <Route exact path="/" component={Main}></Route>
+          <Route
+            path="/add-ideas"
+            render={(props) => <AddIdeas {...props} />}
+          />
+          {/* component={AddIdeas}> */}
 
-          <Route exact path="/add-ideas" component={AddIdeas}></Route>
-          <Route path="*" component={NotFound} />
+          {/* <Route path="*" component={NotFound} /> */}
         </Switch>
       </Router>
     </div>
