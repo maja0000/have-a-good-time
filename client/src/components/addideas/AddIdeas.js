@@ -98,7 +98,7 @@ function AddIdeas() {
           <input type="submit" />
         </form>
         <div className="all-categories-container">
-          <h3>most recent ideas:</h3>
+          <h3>MOST RECENT IDEAS:</h3>
           {ideas.slice(0, 8).map((idea, key) => (
             <div
               key={key}
@@ -122,7 +122,7 @@ function AddIdeas() {
           ))}
         </div>
         <div className="ideas-container">
-          <h3>choose a category :</h3>
+          <h3>CHOOSE A CATEGORY :</h3>
           <div className="categories-container">
             {/* <Link exact to={`${url}/all`}>
               see all
