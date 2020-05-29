@@ -35,9 +35,37 @@ function DisplayAllIdeas() {
         />
       ) : (
         <div style={{ margin: '10px', display: 'flex', flexWrap: 'wrap' }}>
-          {filteredIdeas.length < 1
+          {filteredIdeas.length < 1 && topicId !== 'all'
             ? `We have no ideas in ${topicId} category, maybe you can add one? :-)`
             : ''}
+          {/* {topicId === 'all'
+            ? ideas.map((idea, key) => (
+                <div
+                  key={key}
+                  className="one-idea-name"
+                  style={idea.fake && { opacity: 0.3 }}
+                >
+                  <div className="user-idea">{idea.idea}</div>
+                  <div className="name-vote">
+                    <p className="user-name ">by {idea.author}</p>
+                    <p
+                      className="user-name vote"
+                      onClick={() => updateIdea(idea._id)}
+                    ></p>
+                    {idea.likes ? (
+                      <p
+                        className="user-name score"
+                        // style={likes.true && { backgroundColor: 'red' }}
+                      >
+                        {idea.likes}
+                      </p>
+                    ) : (
+                      ''
+                    )}
+                  </div>
+                </div>
+              ))
+            : ''} */}
           {filteredIdeas.map((idea, key) => (
             <div
               key={key}
@@ -64,32 +92,6 @@ function DisplayAllIdeas() {
               </div>
             </div>
           ))}
-          {/* {ideas.map((idea, key) => (
-            <div
-              key={key}
-              className="one-idea-name"
-              style={idea.fake && { opacity: 0.3 }}
-            >
-              <div className="user-idea">{idea.idea}</div>
-              <div className="name-vote">
-                <p className="user-name ">by {idea.author}</p>
-                <p
-                  className="user-name vote"
-                  onClick={() => updateIdea(idea._id)}
-                ></p>
-                {idea.likes ? (
-                  <p
-                    className="user-name score"
-                    // style={likes.true && { backgroundColor: 'red' }}
-                  >
-                    {idea.likes}
-                  </p>
-                ) : (
-                  ''
-                )}
-              </div>
-            </div>
-          ))} */}
         </div>
       )}
     </>

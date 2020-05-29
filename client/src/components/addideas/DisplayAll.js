@@ -33,7 +33,9 @@ function DisplayAll() {
           loading={loading}
         />
       ) : (
-        <div style={{ backgroundColor: 'pink' }}>
+        <div
+          style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'row' }}
+        >
           {ideas.map((idea, key) => (
             <div
               key={key}

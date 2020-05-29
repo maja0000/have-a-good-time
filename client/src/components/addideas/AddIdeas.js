@@ -32,21 +32,18 @@ function AddIdeas() {
     []
   );
   const classes = useStyles();
-  const [age, setAge] = React.useState('');
 
-  // useEffect(() => {
-  //   getAllIdeas();
-  // });
+  useEffect(() => {
+    getAllIdeas();
+  });
 
   const handleSubmit = (event) => {
     event.preventDefault();
     addNewIdea(event);
   };
-
-  // const updateIdea = (id) => {
-  //   addLike(id);
-  // };
-
+  const updateIdea = (id) => {
+    addLike(id);
+  };
   const categories = [
     'art',
     'music',
@@ -100,9 +97,36 @@ function AddIdeas() {
           </div>
           <input type="submit" />
         </form>
+        <div className="all-categories-container">
+          <h3>most recent ideas:</h3>
+          {ideas.slice(0, 8).map((idea, key) => (
+            <div
+              key={key}
+              className="one-idea-name"
+              style={idea.fake && { opacity: 0.3 }}
+            >
+              <div className="user-idea">{idea.idea}</div>
+              <div className="name-vote">
+                <p className="user-name ">by {idea.author}</p>
+                <p
+                  className="user-name vote"
+                  onClick={() => updateIdea(idea._id)}
+                ></p>
+                {idea.likes ? (
+                  <p className="user-name score">{idea.likes}</p>
+                ) : (
+                  ''
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
         <div className="ideas-container">
-          <p>Choose a category :</p>
+          <h3>choose a category :</h3>
           <div className="categories-container">
+            {/* <Link exact to={`${url}/all`}>
+              see all
+            </Link> */}
             {categories.map((category, key) => (
               <Link key={key} to={`${url}/${category}`}>
                 {category}
@@ -114,7 +138,8 @@ function AddIdeas() {
               path={`${path}/:topicId`}
               component={DisplayAllIdeas}
             ></Route>
-            <Route exact path={`${path}/:all`} component={DisplayAll}></Route>
+            <Route path={`${path}`} component={DisplayAll}></Route>
+            {/* <Route exact path={`add-ideas/all`} component={DisplayAll}></Route> */}
           </Switch>
         </div>
       </div>
