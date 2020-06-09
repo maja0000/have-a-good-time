@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 
-import DisplayAllIdeas from './displayAllIdeas';
+import DisplayAllIdeas from './displayIdeasByCategory';
 import DisplayAll from './DisplayAll';
 
 import 'react-toastify/dist/ReactToastify.css';
@@ -25,6 +25,9 @@ function AddIdeas() {
   const [ideas, loading, addLike, addInput, getAllIdeas, addNewIdea] = useIdeas(
     []
   );
+
+  const [limit, setLimit] = useState(2);
+
   const classes = useStyles();
 
   useEffect(() => {
@@ -38,6 +41,12 @@ function AddIdeas() {
   const updateIdea = (id) => {
     addLike(id);
   };
+  const showMorePosts = () => {
+    setLimit((previous) => previous + 2);
+  };
+  const showLessPosts = () => {
+    setLimit((previous) => previous - 2);
+  };
   const categories = [
     'art',
     'music',
@@ -48,6 +57,7 @@ function AddIdeas() {
     'handmade',
   ];
   let { url, path } = useRouteMatch();
+  let cutIdeas = ideas.slice(0, limit);
 
   return (
     <>
@@ -93,7 +103,7 @@ function AddIdeas() {
         </form>
         <div className="all-categories-container">
           <h3>MOST RECENT IDEAS:</h3>
-          {ideas.slice(0, 8).map((idea, key) => (
+          {cutIdeas.map((idea, key) => (
             <div
               key={key}
               className="one-idea-name"
@@ -114,6 +124,12 @@ function AddIdeas() {
               </div>
             </div>
           ))}
+          {cutIdeas.length === ideas.length ? (
+            ''
+          ) : (
+            <button onClick={showMorePosts}> show more</button>
+          )}
+          {limit > 3 ? <button onClick={showLessPosts}>Show less</button> : ''}
         </div>
         <div className="ideas-container">
           <h3>CHOOSE A CATAGORY :</h3>

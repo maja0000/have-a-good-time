@@ -11,7 +11,6 @@ const override = css`
   margin-right: 50%;
   border-color: #ffc735;
 `;
-
 function DisplayAll() {
   const [ideas, loading, addLike, addInput, getAllIdeas, addNewIdea] = useIdeas(
     []

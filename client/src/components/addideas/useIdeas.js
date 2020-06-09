@@ -4,7 +4,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function useIdeas() {
   const [ideas, setIdeas] = useState([]);
-  //   const [likes, setLikes] = useState(false);
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState({
     idea: '',

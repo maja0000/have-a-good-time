@@ -34,6 +34,12 @@ function App() {
               home
             </NavLink>
           </div>
+          <div className="homeWrapper">
+            {' '}
+            <NavLink className="home" to="/">
+              stats
+            </NavLink>
+          </div>
           <div className="helpWrapper">
             <NavLink className="help" to="/help">
               how to help
