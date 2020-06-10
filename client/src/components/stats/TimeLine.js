@@ -11,7 +11,7 @@ const override = css`
 
 export default function TimeLine() {
   //   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [generatData, setGeneralData] = useState([]);
   const [timeLine, setTimeLine] = useState([]);
 
