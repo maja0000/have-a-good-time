@@ -11,6 +11,8 @@ import Main from './components/introduction/Introduction';
 import Help from './components/help/Help';
 import AddIdeas from './components/addideas/AddIdeas';
 import NotFound from './components/notfound/NotFound';
+import TimeLine from './components/stats/TimeLine';
+
 import { ToastContainer } from 'react-toastify';
 
 // styling
@@ -36,7 +38,7 @@ function App() {
           </div>
           <div className="homeWrapper">
             {' '}
-            <NavLink className="home" to="/">
+            <NavLink className="home" to="/stats">
               stats
             </NavLink>
           </div>
@@ -63,13 +65,13 @@ function App() {
         <Switch>
           <Route exact path="/help" component={Help}></Route>
           <Route exact path="/" component={Main}></Route>
+          <Route exact path="/stats" component={TimeLine}></Route>
           <Route
             path="/add-ideas"
             render={(props) => <AddIdeas {...props} />}
           />
-          {/* component={AddIdeas}> */}
 
-          {/* <Route path="*" component={NotFound} /> */}
+          <Route path="*" component={NotFound} />
         </Switch>
       </Router>
     </div>

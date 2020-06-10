@@ -1,0 +1,29 @@
+.country-box {
+  /* background-color: grey; */
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+.stats-title {
+  margin-top: 100px;
+  text-align: center;
+}
+.last-update {
+  text-align: center;
+}
+.country-card {
+  /* background-color: hotpink; */
+  text-align: center;
+
+  margin: 5px;
+  padding: 5px;
+}
+.flag {
+  width: 40%;
+  margin: 0 auto;
+  height: 40px;
+
+  background-position: center;
+  background-size: cover;
+}

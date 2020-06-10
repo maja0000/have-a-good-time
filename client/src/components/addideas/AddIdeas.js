@@ -89,7 +89,7 @@ function AddIdeas() {
               id="browser"
               onChange={(event) => addInput(event)}
             />
-            <datalist id="browsers">
+            <datalist id="">
               <option value="nature" />
               <option value="online" />
               <option value="handmade" />
