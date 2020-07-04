@@ -2,7 +2,7 @@ import React from 'react';
 import TimeLine from './TimeLine';
 import DeathsGermany from './DeathsGermany';
 import Recovered from './Recovered';
-// test
+
 export default function Stats() {
   return (
     <div className="stats-wrapper">
