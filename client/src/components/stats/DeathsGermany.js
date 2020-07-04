@@ -53,8 +53,6 @@ const style = {
 };
 
 export default function DeathsGermany() {
-  // static jsfiddleUrl = 'https://jsfiddle.net/alidingling/9km41z5z/';
-
   return (
     <>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
