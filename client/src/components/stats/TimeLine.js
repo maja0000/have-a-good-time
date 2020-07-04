@@ -42,7 +42,7 @@ export default function TimeLine() {
       ) : (
         <>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <h3 className="stats-title">The most Covid-19 cases and deaths</h3>
+            <h2 className="stats-title">The most Covid-19 cases and deaths</h2>
             <p className="last-update">
               Last update : {generatData.last_update}
             </p>

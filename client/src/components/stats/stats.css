@@ -3,10 +3,11 @@
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 50px;
   margin-top: 60px;
 }
 .stats-title {
-  margin-top: 100px;
+  /* margin-top: 0px; */
   text-align: center;
 }
 .last-update {

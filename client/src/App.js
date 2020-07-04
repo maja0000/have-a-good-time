@@ -12,6 +12,7 @@ import Help from './components/help/Help';
 import AddIdeas from './components/addideas/AddIdeas';
 import NotFound from './components/notfound/NotFound';
 import TimeLine from './components/stats/TimeLine';
+import Stats from './components/stats/Stats';
 
 import { ToastContainer } from 'react-toastify';
 
@@ -65,7 +66,7 @@ function App() {
         <Switch>
           <Route exact path="/help" component={Help}></Route>
           <Route exact path="/" component={Main}></Route>
-          <Route exact path="/stats" component={TimeLine}></Route>
+          <Route exact path="/stats" component={Stats}></Route>
           <Route
             path="/add-ideas"
             render={(props) => <AddIdeas {...props} />}

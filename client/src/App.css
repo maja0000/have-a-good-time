@@ -26,6 +26,8 @@ h1 {
 
 /* // navbar */
 .nav-container {
+  z-index: 10;
+
   position: fixed;
   background-color: white;
   height: 60px;
