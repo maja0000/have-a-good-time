@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { RadialBarChart, RadialBar, Legend } from 'recharts';
 
 const data = [
@@ -52,46 +52,44 @@ const style = {
   lineHeight: '24px',
 };
 
-export default class DeathsGermany extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/9km41z5z/';
+export default function DeathsGermany() {
+  // static jsfiddleUrl = 'https://jsfiddle.net/alidingling/9km41z5z/';
 
-  render() {
-    return (
-      <>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <h2 style={{ marginTop: '100px' }}>
-            Deaths in Germany in 2020, by age
-          </h2>
-          <p>Total - 8,956, including 4,960 men and 3,996 woman</p>
-          <RadialBarChart
-            width={500}
-            margin-top={40}
-            height={300}
-            cx={150}
-            cy={150}
-            innerRadius={20}
-            outerRadius={140}
-            barSize={10}
-            data={data}
-          >
-            <RadialBar
-              minAngle={15}
-              label={{ position: 'insideStart', fill: '#fff' }}
-              background
-              clockWise
-              dataKey="uv"
-            />
-            <Legend
-              iconSize={10}
-              width={120}
-              height={140}
-              layout="vertical"
-              verticalAlign="middle"
-              wrapperStyle={style}
-            />
-          </RadialBarChart>
-        </div>
-      </>
-    );
-  }
+  return (
+    <>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <h2 style={{ marginTop: '100px' }}>
+          Deaths in Germany in 2020, by age
+        </h2>
+        <p>Total - 8,956, including 4,960 men and 3,996 woman</p>
+        <RadialBarChart
+          width={500}
+          margin-top={40}
+          height={300}
+          cx={150}
+          cy={150}
+          innerRadius={20}
+          outerRadius={140}
+          barSize={10}
+          data={data}
+        >
+          <RadialBar
+            minAngle={15}
+            label={{ position: 'insideStart', fill: '#fff' }}
+            background
+            clockWise
+            dataKey="uv"
+          />
+          <Legend
+            iconSize={10}
+            width={120}
+            height={140}
+            layout="vertical"
+            verticalAlign="middle"
+            wrapperStyle={style}
+          />
+        </RadialBarChart>
+      </div>
+    </>
+  );
 }

@@ -14,9 +14,11 @@ const override = css`
 
 function DisplayAllIdeas() {
   const [ideas, loading, addLike, , getAllIdeas] = useIdeas([]);
+
   useEffect(() => {
     getAllIdeas();
   }, []);
+
   const updateIdea = (id) => {
     addLike(id);
   };

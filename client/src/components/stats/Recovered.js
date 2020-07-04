@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { PieChart, Pie, Sector, Cell, Legend } from 'recharts';
 
 const data = [
@@ -42,45 +42,41 @@ const renderCustomizedLabel = ({
   );
 };
 
-export default class Recovered extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/c9pL8k61/';
-
-  render() {
-    return (
-      <>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <h2 style={{ marginTop: '100px' }}>
-            Infected, deaths and recovered in Germany
-          </h2>
-          <PieChart width={400} height={400}>
-            <Pie
-              data={data}
-              cx={200}
-              cy={200}
-              labelLine={false}
-              label={renderCustomizedLabel}
-              outerRadius={80}
-              fill="#8884d8"
-              dataKey="value"
-            >
-              {data.map((entry, index) => (
-                <Cell
-                  key={`cell-${index}`}
-                  fill={COLORS[index % COLORS.length]}
-                />
-              ))}
-            </Pie>
-            <Legend
-              iconSize={10}
-              width={120}
-              height={140}
-              // layout="verticle"
-              // verticalAlign="centre"
-              wrapperStyle={style}
-            />
-          </PieChart>
-        </div>
-      </>
-    );
-  }
+export default function Recovered() {
+  return (
+    <>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <h2 style={{ marginTop: '100px' }}>
+          Infected, deaths and recovered in Germany
+        </h2>
+        <PieChart width={400} height={400}>
+          <Pie
+            data={data}
+            cx={200}
+            cy={200}
+            labelLine={false}
+            label={renderCustomizedLabel}
+            outerRadius={80}
+            fill="#8884d8"
+            dataKey="value"
+          >
+            {data.map((entry, index) => (
+              <Cell
+                key={`cell-${index}`}
+                fill={COLORS[index % COLORS.length]}
+              />
+            ))}
+          </Pie>
+          <Legend
+            iconSize={10}
+            width={120}
+            height={140}
+            // layout="verticle"
+            // verticalAlign="centre"
+            wrapperStyle={style}
+          />
+        </PieChart>
+      </div>
+    </>
+  );
 }

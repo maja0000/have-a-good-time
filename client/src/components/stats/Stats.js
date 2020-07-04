@@ -18,7 +18,7 @@ export default function Stats() {
         <DeathsGermany />
         <Recovered />
       </div>
-      {/* <TimeLine /> */}
+      <TimeLine />
     </div>
   );
 }
