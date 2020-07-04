@@ -11,7 +11,6 @@ import Main from './components/introduction/Introduction';
 import Help from './components/help/Help';
 import AddIdeas from './components/addideas/AddIdeas';
 import NotFound from './components/notfound/NotFound';
-import TimeLine from './components/stats/TimeLine';
 import Stats from './components/stats/Stats';
 
 import { ToastContainer } from 'react-toastify';
