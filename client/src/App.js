@@ -55,7 +55,7 @@ function App() {
           </div>
           <a
             className="portfolio"
-            href=" https://maja-gach-portfolio.herokuapp.com/"
+            href=" https://maja-gach-portfolio.netlify.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
