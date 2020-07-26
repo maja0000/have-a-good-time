@@ -69,44 +69,44 @@ export default function DefaultIdeas() {
           {({ showModal }) => (
             <Fragment>
               <div className="ideas-headers-container">
-                <p
+                <span
                   className="idea-header social"
                   onClick={() => showModal(ModalSocialOpen)}
                 >
                   social{' '}
-                </p>
-                <p
+                </span>
+                <span
                   className="idea-header art"
                   onClick={() => showModal(ModalArtOpen, { foo: 'bar' })}
                 >
                   art
-                </p>
-                <p
+                </span>
+                <span
                   className="idea-header music"
                   onClick={() => showModal(ModalMusicOpen)}
                 >
                   music
-                </p>
-                <p
+                </span>
+                <span
                   className="idea-header science"
                   onClick={() => showModal(ModalScienceOpen)}
                 >
                   {' '}
                   science
-                </p>
-                <p
+                </span>
+                <span
                   className="idea-header games"
                   onClick={() => showModal(ModalGamesOpen)}
                 >
                   games
-                </p>
+                </span>
 
-                <p
+                <span
                   className="idea-header cooking"
                   onClick={() => showModal(ModalCookingOpen)}
                 >
                   cooking
-                </p>
+                </span>
               </div>
             </Fragment>
           )}
